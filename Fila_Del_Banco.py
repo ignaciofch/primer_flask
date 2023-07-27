@@ -1,4 +1,5 @@
 from queue import Queue
+from flask import Flask
 
 def personas(desde: int, hasta: int) -> Queue :
     personas = Queue()
@@ -61,17 +62,17 @@ def avanzarFila(fila: Queue, min: int):
      t += 1 
   return fila
 
-if __name__ == '__main__':
-  fila: Queue = Queue()
-  fila_inicial: int = int(input())
-  for numero in range(1, fila_inicial+1):
-    fila.put(numero)
-  min: int = int(input())
-  avanzarFila(fila, min)
-  res = []
-  for i in range(0, fila.qsize()):
-    res.append(fila.get())
-  print(res)
+#if __name__ == '__main__':
+#  fila: Queue = Queue()
+#  fila_inicial: int = int(input())
+#  for numero in range(1, fila_inicial+1):
+#    fila.put(numero)
+#  min: int = int(input())
+#  avanzarFila(fila, min)
+#  res = []
+#  for i in range(0, fila.qsize()):
+#    res.append(fila.get())
+#  print(res)
 
 
 # Caja1: Empieza a atender 10:01, y atiende a una persona cada 10 minutos
